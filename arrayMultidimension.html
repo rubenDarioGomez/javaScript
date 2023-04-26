@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    body {
+        background-color: rgb(164, 37, 45);
+    }
+
+    div {
+        width: 50%;
+        background-color: blanchedalmond;
+        border: 12px double black;
+        margin: 50px auto;
+        padding: 20px;
+        text-align: center;
+    }
+</style>
+
+<body>
+    <div>
+        <script>
+
+            function write(arg) {
+                document.write(arg+'<br><br>');
+            }
+            var primeraDimension = [];
+            var segundaDimension = ['sd1', 'sd2'];
+            primeraDimension[0] = segundaDimension; // la segunda dimesion se coloca en la primera posicion 
+
+            var terceraDimension = ['td1','td2'];
+            segundaDimension[2] = terceraDimension;
+
+            write(primeraDimension[0][2][1]+'<br><br>'); //de esta manera mostramos la posicion que buscamos en tercera dimension
+
+            var multiArray = ['pd0', ['sd0','sd1',['td0','td1']],'pd2']; // manera mas sencilla de agregar arreglos multidimensionales
+
+            write(multiArray[1][2][0]) // forma de recorrer los array araves de sus indices
+
+        </script>
+    </div>
+</body>
+
+</html>

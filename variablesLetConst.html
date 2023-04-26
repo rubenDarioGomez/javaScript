@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Variables let const</title>
+</head>
+<style>
+    body{
+        background-color: aqua;
+    }
+    section{
+        margin: 80px auto;
+        background-color: #ccc;
+        width: 70%;
+        padding: 25px;
+        border: 5px solid;
+    }
+</style>
+<body>
+    <section>
+        <script>
+            'use strict'
+            /*Comenzar con letra, simbolo pesos $ o guion bajo_
+            no empezar nuncacon numero
+            no pueden ser palabras reservadas
+            son case sensitive
+            deben ser descriptivas*/
+            function write(arg) {
+                document.write(arg + '<br><br>')
+            } // funcion con un argumento para ecribir en pantalla
+    
+            var nombre ='nombre'; // se declara la variable y se le asigna un valor
+            var apellido = 'apellido';
+    
+            var uno, dos, tres; // se declaran variables en una misma linea sin asignales un valor
+    
+            var name = 'name', lastName = 'lastName', age = 29; // se declaran tres varibales en una linea y se les asigna el valor
+    
+            nombre = 'ruben'; // se le asigna otro valor a la variable nombre
+             
+            function write(arg){
+                document.write(arg+'<br><br>')
+            } // funcion con un argumento para ecribir en pantalla
+
+            write(nombre);
+
+            nombre = 'dario'
+
+            write(nombre);
+
+
+            const constante = 'constante'; // no se puede definir ni modificar mas adelante
+            write(constante); // se llama la funcion con el argumento
+
+            var x = 5;
+            var z = 'texto';
+
+            for(let x = 1; x !=false; x = false) {
+                let z = 0;
+                console.log(x,z);
+            } // la palabra reservada LET se usa para declarar variables pero solo se podran usar dentro de la funcion bucle o condicional donde se declaren
+        </script>
+    </section>
+ 
+</body>
+</html>

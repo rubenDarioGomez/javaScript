@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prompt arrays</title>
+</head>
+<style>
+    body {
+        background-color: rgb(164, 37, 45);
+    }
+
+    div {
+        width: 50%;
+        background-color: blanchedalmond;
+        border: 12px double black;
+        margin: 50px auto;
+        padding: 20px;
+        text-align: center;
+    }
+</style>
+
+<body>
+    <div>
+        <h3>prompt</h3>
+
+        <script>
+
+            function write(arg) {
+                document.write(arg + '<br><br>')
+            }
+
+            var n1, n2, total;
+            // n1 = prompt('numero uno'); // abrimos cuadro de dialogo en el navegador para ingresar informacion
+            // n2 = prompt('numero dos');
+            total = n1 + n2;
+
+            write(n1 + ' + ' + n2 + ' = ' + total); // se concatena la informacion ingresada y se muestra en pantalla
+
+            var arregloUno, arregloDos, arregloTres, arregloCuatro, arregloAsosiativo, propiedadesArreglos
+
+            arregloUno = new Array('Ruben', 'Dario', 28); // un array es una variable con varios datos
+
+            arregloDos = ['Ruben', 'Dario', 28]; // forma abreviada de crear arrays
+
+            arregloTres = new Array(); // se puede declarar y luego se se asignan los valores en una posicion desde el cero
+
+            arregloCuatro = [];
+
+            arregloCuatro[1] = 'Ruben' // se agrega un strimg al array en la segunda posicion
+
+            arregloCuatro[0] = 2 // se agrega un numero al array en la primera posicion 
+
+
+            arregloAsosiativo = []; // decalra primero el array vacio para asignar nombres a las posiciones;
+            arregloAsosiativo["nombre"] = 'Ruben'; // a las posiciones de los arreglos se les puede colocar nombres
+            arregloAsosiativo["apellido"] = 'Gomez';
+            arregloAsosiativo["edad"] = 20;
+
+            write(arregloAsosiativo["apellido"]);
+            
+            arregloAsosiativo.length = 2; // define el la cantidad de posiciones que tendra un arreglo
+
+
+            propiedadesArreglos = ['uno', 'dos'];
+            write("<h3>PROPIEDADES DE LOS ARREGLOS</h3>");
+
+            propiedadesArreglos.unshift('cero'); //agrega un valor a la primera prosicion del arreglo
+
+
+            propiedadesArreglos.push('ultimo'); // agrega un valor al arreglo en la ultima posicion
+
+            write(propiedadesArreglos[propiedadesArreglos.length-1]); // dentro de corchetesse visualiza el ultimo elemento de un arreglo
+
+
+            propiedadesArreglos.pop();  // elimina el ultimo dato del arreglo
+
+            write(propiedadesArreglos[propiedadesArreglos.length-1]);
+
+
+            propiedadesArreglos.shift(); // elimina el primer dato del arreglo
+
+            propiedadesArreglos.push('otro', 'mas'); 
+
+            write(propiedadesArreglos[propiedadesArreglos.length-1]);
+
+
+
+    
+
+
+        </script>
+    </div>
+</body>
+
+</html>

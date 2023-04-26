@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Operadores de asignacion</title>
+</head>
+
+<style>
+    body{
+        background-color: aqua;
+    }
+    section{
+        margin: 80px auto;
+        background-color: #ccc;
+        width: 70%;
+        padding: 25px;
+        border: 5px solid;
+    }
+</style>
+<body>
+    <section>
+        <script>
+            function write(arg) {
+                document.write(arg + '<br><br>')
+            } // funcion con un argumento para ecribir en pantalla
+            
+            var numero = 5;
+            write(numero);
+
+            numero +=7; // se suma 7 mas cinco y el resultado sera asignado a la variable.
+            write(numero);
+
+            numero -=2; // se resta 12 menos2  y el resultado sera asignado a la variable.
+            write(numero);
+
+            numero *=3; // se multiplica 10 por 3  y el resultado sera asignado a la variable
+            write(numero);
+
+            numero /=2; // se divide 30 entre 2  y el resultado sera asignado a la variable
+            write(numero);
+
+            numero %=8;
+            write(numero);
+
+            
+
+        </script>
+    </section>
+
+    <section>
+        <script>
+
+function write(arg) {
+                document.write(arg + '<br><br>')
+            } 
+
+            var nombre ='ruben &nbsp'; // &nbsp da un espacio en blanco
+            var apellido = 'Gomez';
+            var nombreCompleto = nombre + apellido; // Concatenamos las dos variables
+            write(nombreCompleto); // imprimimos el resultado en la pantalla
+
+
+            var numero, numeroDos, total;
+            numero = 1;
+            numeroDos = 5;
+            total = numero + numeroDos;
+            write(total);
+        </script>
+    </section>
+
+</body>
+
+</html>
