@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>posicion</title>
+</head>
+<style>
+    body{
+        background-color: #ccc;
+    }
+
+    #objeto1{
+        border: 5px double;
+        width: 50%;
+        height: 500px;
+        margin: 0 auto;
+        background-color: #fff;
+    }
+</style>
+<body>
+    <div id="objeto1">
+
+    <button></button>
+
+
+        <script>
+            var objeto1 = document.getElementById('objeto1'); //del documeto se toma un elemento por el id se almancena en una variable para luego ser manipulado y modificado
+
+            objeto1.style.width='100%' //se llama el objeto y seguido del punto el metodo y luego del punto su propiedad
+
+            objeto1.style.height='100px'
+            objeto1.style.backgroundColor='blue'
+
+            var btn = document.getElementsByTagName('button')[0]; // en este caso se toma un elemento html por su nombre de etiqueta y su numero de indice o de posicion en el documento para luego ser modificado
+
+            btn.style.width='70px';
+            btn.style.height='30px';
+            btn.innerHTML='Boton';
+
+
+
+        </script>
+    </div>
+</body>
+</html>

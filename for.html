@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>For</title>
+</head>
+
+<body>
+
+
+    <section>
+        <script>
+
+            //para contador = 1 y contador<10 entonces contador incrementta en 1 con ++ o disminuye uno con --
+            for (let contador = 1; contador <= 10; contador++) {
+                document.write(contador + "<br>");
+            }
+
+            for (let contador2 = 10; contador2 >= 1; contador2--) {
+                document.write(contador2 + "<br>");
+            }
+
+            for (var i = 1; i <= 10; i++) {
+                document.write("<table border='3'><caption>tabla de" + i + " </caption><tbody>");
+
+                    if(i == 3) { // si i es igual a tres entonces el codigo seguira ejecutandose desde el 4 omintiendio el numero 3
+                        continue;
+                    }
+
+                for (var x = 1; x <= 10; x++) {
+
+                    if (x == 5) {
+                        break; // si x es igual  a 5 se saldra del flujo se ejecucion normal y omitira los valores que hay despues del 5
+                    }
+                    document.write("<tr>");
+                    document.write("<td>" + i + "</td><td> X </td> <td>" + x + "<td>" + (i*x) + "</td>");
+                    document.write("</tr><br>");
+                }
+
+
+            }
+
+            document.write("</tbody> </table>");
+
+        </script>
+    </section>
+</body>
+
+</html>

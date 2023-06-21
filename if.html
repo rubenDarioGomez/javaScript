@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>if</title>
+</head>
+<style>
+    body {
+        background-color: aqua;
+    }
+
+    section {
+        margin: 80px auto;
+        background-color: #ccc;
+        width: 70%;
+        padding: 25px;
+        border: 5px solid;
+    }
+</style>
+
+<body>
+    <section>
+
+        <script>
+            var n, n2;
+            n = 2;
+            n2 = '2';
+
+            if (n === n2) { // condicional que permite comparar dos variables. en este caso con los tres iguales, se esta preguntado si las variables tiene el mismo tipo de caracter numerico o texto
+                console.log('los valores son iguales');
+            } else { // si la primera condicion no se cumple se ejecuta esta linea de codigo
+                console.log('los numeros son diferentes')
+            }
+
+            // control ternario
+            // condicion ? si esto : si no esto
+
+            let edad = 18; 
+
+            let condicion = edad >= 18 ? "eres un adultero" : "no eres adultero"; // a la variable valor se le asigna el string si la condicion antes del singno de interrogacion se cumplpe si no la que esta despues de los dos puntos.
+
+            console.log(condicion);
+
+            let a = -1;
+
+            let valor = a === 0 ? "el valor es igual" : // a la variable valor se le asigna el string si la condicion antes del singno de interrogacion se cumplpe, si no evalua la condicion despues de los dos puntos, y a si continua hasta que alguna condicion se cumpla
+                        a > 0 ? "el valor el mayor" :
+                        a < 0 ? "el valor es menor" :
+                        "no hay nada";
+
+                        console.log(valor);
+
+        var num = prompt("numero");
+        var num2 = prompt("numero2");
+        
+
+        if (!isNaN(num) && !isNaN(num2)) {
+
+            var operacion = prompt("operaciones: '+' '-' '*' '/'").toLocaleLowerCase();  // todas las letras digitadas por el usuario se tranforman en minusculas
+
+         if (operacion == 'suma') {
+            document.write (parseInt(num) + parseInt(num2));
+
+        } else if (operacion == 'resta') {
+            document.write (parseInt(num) + parseInt(num2));
+
+        } else if (operacion == 'multiplicacion') {
+            document.write (parseInt(num) + parseInt(num2));
+
+        } else if (operacion == 'division') {
+            document.write (parseInt(num) + parseInt(num2));
+
+        } else {
+            alert('algo anda mal');
+        }
+    } else {
+        alert('coma mierda')
+    }
+
+
+        </script>
+    </section>
+</body>
+
+</html>

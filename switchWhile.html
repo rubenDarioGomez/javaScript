@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>switch</title>
+</head>
+
+<body>
+
+    <!-- <script>
+        var num = prompt("numero");
+        var num2 = prompt("numero2");
+
+
+        if (!isNaN(num) && !isNaN(num2)) {
+
+            var operacion = prompt("operaciones: '+' '-' '*' '/'").toLocaleLowerCase();  // todas las letras digitadas por el usuario se tranforman en minusculas
+
+            switch (operacion) { //dentro de los parentesis se coloca el parametro a evaluar
+                case "suma": document.write(parseInt(num) + parseInt(num2));
+                    break;// el case el el comparativo con el parametro establecido despues de los dos punto va el codigo a ejecutar luego del break se rompre el ciclo y continua el flujo normal de codigo 
+
+                case "resta": document.write(parseInt(num) + parseInt(num2));
+                    break;
+
+                case "multiplicacion": document.write(parseInt(num) + parseInt(num2));
+                    break;
+
+                case "division": document.write(parseInt(num) + parseInt(num2));
+                    break;
+
+                default: alert('error de digitacion');
+                    break;
+
+            }}
+    </script> -->
+    <section>
+
+        <table border="2" style="border-collapse: separate;">
+            <thead>
+
+                <tr>
+                    <th>No.</th>
+                    <th>Mes</th>
+                </tr>
+
+            </thead>
+
+            <tbody>
+                <script>
+                    var mes = ['enero', 'febrero', 'marzo'];
+
+                    var contador = 0;
+
+                    //mientras que contador sea menor que la longitud de mes ejecutara el codigo dentro de los corchetes hasta que se deje de cumplir la condicion
+                    while (contador<mes.length) {
+                        document.write("<tr>");
+
+                        document.write("<td>");
+                        document.write(contador + 1);
+                        document.write("</td>");
+
+                        document.write("<td>");
+                        document.write(mes[contador]);
+                        document.write("</td>");
+
+                        document.write("<tr>");
+                        contador ++;  // contador aumenta de cantidad en uno y vuelve a comenzar el ciclo hasta que se deje de cumplir la condicion;
+                    }
+                </script>
+
+            </tbody>
+
+        </table> <br><br>
+
+
+<section><script>
+
+do { // ejecuta las lineas de codigo y luego evalua los resultados mientras que num<1 || num>10 || isNaN(num)) el prompt se ejecutara al menos una vez
+var num = prompt('numeros del 1 al 10');
+
+} while (num<1 || num>10 || isNaN(num));
+
+
+    
+</script></section>
+</body>
+
+</html>
