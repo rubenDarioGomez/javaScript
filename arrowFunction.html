@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>arrow function</title>
+</head>
+<body>
+    <script>
+        const suma1 = (num1, num2) => {
+            return num1 + num2;
+        } //sintaxis basica para definir una funcion de tipo fecla
+
+        const suma2 = (num1, num2) => num1 + num2; //de esta manera podemos abreviar el codigo para que retorne el resultado directamente
+
+        console.log(suma1( 4, 5));
+        console.log(suma2( 4, 6));
+
+        let frutas = ["manzana", "pera", "tomate", "naranja"];
+        frutas.forEach(function(fruta){
+            console.log(fruta); 
+        }) // forma tradicional de iterar con arreglos
+
+        let frutasDos = ["limon", "coco", "papaya"];
+        frutasDos.forEach(fruta => {
+            console.log(fruta)
+        })
+
+        frutas.map(fruta => console.log(fruta + " con map")); // los corchetes se pueden omitir 
+
+        frutas.map(fruta=>console.log(fruta.length));
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Objetos del documeto</title>
+</head>
+<style>
+    body {
+        background-color: aquamarine;
+    }
+
+    section {
+        border: 5px solid red;
+        width: 70%;
+        height: auto;
+        margin: 100px auto;
+        background-color: white;
+        text-align: center;
+        color: blue;
+        font-size: 30px;
+    }
+
+    .predefinido {
+        color: green;
+        font-size: 50px;
+        font-family: fantasy;
+    }
+</style>
+
+<body>
+    <section>
+
+        <a href="#" name="enlace1">Enlace uno</a>
+
+        <h1>crear atributo</h1>
+
+<button id="boton1" onclick="crearBoton()" >Crear boton</button> <br><br>
+
+<button id="boton2" onclick="crearAtributo()" >Crear atributo</button> <br><br>
+
+
+        <form action="codigo.php" method="post">
+
+            <input type="text" name="input1" value="input1">
+
+            <input type="text" name="input2" value="input2">
+
+            <input type=text" name="input3" value="input3">
+
+        </form>
+        <script>
+       const write = (p) => {
+        document.write(p + "<br><br>");
+       }
+       write(document.title); // seleccionamos el valor que tienne el titulo en el head
+       write(document.anchors[0].name); // selecionamos el nombre del primer enlace en el documento html
+       write(document.forms[0].elements[2].value); // seleccionamos el valor que tiene el segundo elemeto del primer formulario del documento html
+
+       const crearBoton = () => {
+        var btn = document.createElement("button"); // create element permite crear cualquier elemento html
+        document.getElementsByTagName('section')[0].appendChild(btn);
+       }
+
+       const crearAtributo = () => {
+        var h1 = document.getElementsByTagName("h1")[0]; // toma un elemento html por su nombre de etiqueta
+        var atr = document.createAttribute("class"); // se crea un atributo  de tipo clase 
+        atr.value = "predefinido"; // se le asigna la clase a la variable 
+        h1.setAttributeNode(atr); // se le asigna a la etqueta html el valor de la clase la variable atr
+    }
+        write(document.scripts.length); // devuelve el valor de scripst en le docuemto
+
+        write(document.image.length); // devuelve el valor de imagenes en el docuemto
+      
+        </script>
+    </section>
+</body>
+
+</html>
