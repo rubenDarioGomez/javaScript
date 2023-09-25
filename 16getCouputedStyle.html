@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>get computed style</title>
+    <style>
+        #miParrafo{
+            font-size: 30px;
+            color: green;
+        }
+    </style>
+</head>
+<body>
+    <p id="miParrafo">Lorem, ipsum.</p>
+
+    <script>
+        console.clear();
+
+        let parrafo = document.getElementById('miParrafo');
+        console.log(parrafo.style.fontSize);
+        console.log(parrafo.style.color); // los elementos no muestran las propiedades de css
+
+        let pStilos = getComputedStyle(parrafo) // de esta manera podemos tomar todos los posibles estilos que puedad tener un elemento en css
+        console.log(pStilos);
+        console.log(pStilos.getPropertyValue('font-size')); // accedemos al estilo especifico que necesitamos ver
+        console.log(pStilos.getPropertyValue('color'));
+        console.log(pStilos.fontSize); // manera mas corta de acceder al calor de css
+        console.log(pStilos.color); // manera mas corta de acceder al calor de css
+
+
+
+    </script>
+</body>
+</html>

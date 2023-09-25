@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>tipos de eventos</title>
+</head>
+<style>
+    body {
+        background-color: aqua;
+    }
+
+    section {
+        margin: 80px auto;
+        background-color: #ccc;
+        width: 70%;
+        padding: 25px;
+        border: 5px solid black;
+    }
+</style>
+
+<!-- <body onload="alert('evento onload cuando la pagina ya cargo')"> -->
+<body>
+    
+    <section style="border-color: black;" onmouseout="resalta(this)">
+
+        <!-- <h1 onmouseover="alert('puso el mouse sobre el titulo')" onmouseout="alert('sacaste el mouse de la seccion')">evento onMouseOut</h1>
+
+        <input type="text" placeholder="hacer clik"
+            onfocus="placeholder = 'onfocus diste click aqui'; style.backgroundColor ='red'"
+            onblur="placeholder='diste click fuera de aqui'; style.backgroundColor='green'">
+
+            <button onclick="alert('presionaste el boton')">onclick</button> -->
+    </section>
+
+     <section style="border-color: black;" onmouseover="resalta(this)">  <!--le pasamos en nombre de una funcion externa, this hace referencia a ese elemeto -->
+
+    </section>
+
+    <script>
+        const resalta = (e) => {
+            switch(e.style.borderColor) {
+                case 'black': e.style.backgroundColor = 'black';
+                case 'black': e.style.borderColor = 'white';
+                break;
+
+                case 'white': e.style.backgroundColor = 'white';
+                case 'black': e.style.borderColor = 'black';
+                break;
+
+            }
+        }
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Get Element</title>
+</head>
+
+<body>
+    <h2 id="info" class="texto dos testing">
+        <span class="soyUnSpan">Hola mundo</span>
+        <span>qué tal?</span>
+    </h2>
+    <form action="" method="GET">
+        <input name="usuario" type="text" placeholder="Usuario"><br>
+        <br>
+        <input name="contrasena" type="password" placeholder="Contraseña">
+    </form>
+    <p class="texto">Párrafo 1</p>
+    <p class="texto">Prueba</p>
+    <p class="lorem">Lorem ipsum dolor sit.</p>
+    <a href="https://google.com.co" class="enlace">Google</a><br>
+    <a href="https://youtube.com" class="enlace">Youtube</a><br>
+    <br>
+    <button class="eventos" data-valor='cancelado'>Cancelar</button>
+    <button class="eventos" data-valor='enviado'>Enviar</button>
+    <p name="lorem1">Lorem 1</p>
+    <p name="lorem2">Lorem 2</p>
+
+    <script>
+
+        console.clear(); // limpiamos la consola
+        console.log(document); // mostramos el objeto del documento en la consola
+
+        /*
+        getElementById - tomar documento por su ID
+        */
+
+        var info = document.getElementById('info'); // seleccionamos el elemnto del documento por su ID
+
+        info.style.fontSize = '30px'
+        info.style.color = 'green' // de esta manera modificamos el tamaño de fuente del onjeto seleccionado del documento
+        console.log(info)
+
+        /*
+        getElementsByTagName - tomar documento por su nombre de eiqueta
+        */
+
+        var span = document.getElementsByTagName('span'); //tomar documento por su nombre de etiqueta
+
+        span = Array.from(span); // se convierte la etiquera seleccionada en un arreglo
+        span.forEach(e => {
+            document.write(e + '<br>');
+        });
+
+        console.log(span[1]) // le indicamos el indice o posicion  de la etuiqueta 
+
+        /*
+        getElementsByName - tomar documento por su atributo name
+        */
+
+        var name = document.getElementsByName('usuario'); // tomar documento por su atributo name
+
+        console.log(name);
+
+        /*
+        getElementsByClassName - tomar documento por su atributo clase
+        */
+
+        var clase = document.getElementsByClassName('texto'); //tomar documento por su atributo clase
+
+        console.log(clase[1].textContent); // de esta manera accedemos al texto de la etiqueta seleccionada
+        console.log(clase[0].innerHTML); // de esta manera accedemos al texto las etiquetas que hay dentro de la etiqueta seleccionada
+
+        var selector = document.querySelector('input'); // selecciona el primer la primera etiqueta con este elemento
+        console.log(selector);
+
+        var selectorAll = document.querySelectorAll('span, a, h2'); // selecciona todas las etiquetas con este elemento
+        console.log(selectorAll);
+
+        var atrType = document.querySelectorAll('[type="password"]'); // selecciona todas las etiquetas con este atributo
+
+        var atrName = document.querySelectorAll('[name="password"]');
+
+        var atrClass = document.querySelectorAll('.texto'); // selecciona el elemento con el valor de su clase
+
+        var atrId = document.querySelectorAll('#info'); // selecciona el elemento con el valor de su ID
+
+
+        console.log(atrId);
+
+
+
+
+
+    </script>
+</body>
+
+</html>

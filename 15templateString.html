@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="es">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Template string</title>
+    </head>
+
+<body>
+    <h1>resultado</h1>
+    <div id="resultado"></div>
+
+    <h1>template string</h1>
+    <div id="template"></div>
+    
+    <script>
+
+       var resultado = document.getElementById('resultado');
+       var texto = "texto" + "<br>" +
+       " mas texto"; // forma tradicional de agregar saltos de linea
+       resultado.innerHTML = texto;
+
+       var template = document.getElementById('template');
+       var templateString = `<h2>texto multilinea</h2> <br> <h3>con template "string"</h3> <br> mas sencillo`;
+       template.innerHTML = templateString; // con estas comillas podemos concatenar etiquetas mas facilmente
+
+       var multi = 10*10;
+       var suma = 10+10;
+       var resta = 10-10;
+
+
+       var igual = `total multiplicacion: ${multi} <br> total suma: ${suma} <br> total resta: ${resta}`;
+       template.innerHTML = igual; // de esta  manera concatenamos las variables que necesitemos
+
+
+
+    </script>
+</body>
+</html>

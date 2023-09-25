@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>For each</title>
+</head>
+<body>
+    <table border="3">
+        <thead>
+            <tr>
+                <th>Nombre</th>
+                <th>Apellido</th>
+                <th>Edad</th>
+            </tr>
+        </thead>
+
+        <tbody></tbody>
+    </table>
+
+    <script>
+        var tbody = document.querySelector('tbody');
+        console.log(tbody.nodeType); // tipo de nodo que se esta seleccionado del DOM
+
+        var datos = [
+            {nombre : 'Ruben', apellido : 'Gomez', edad : '29'},
+            {nombre : 'Dario', apellido : 'Gomez', edad : '29'},
+            {nombre : 'Andrea', apellido : 'Gomez', edad : '29'}
+        ];
+
+        datos.forEach((value, index, array) => { // forEach permite interactuar con cada uno de los elementos de array y recibe una fucion como parametro la cual tiene tres parametros y solo el primero es obligatorio
+            console.log(index, value);
+            let fila = `<tr>
+                <td>${value.nombre}</td>
+                <td>${value.apellido}</td>
+                <td>${value.edad}</td>
+                `;
+                tbody.innerHTML += fila
+
+        })
+    </script>
+</body>
+</html>

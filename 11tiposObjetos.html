@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tipos de objetos</title>
+</head>
+<body>
+    <script>
+        /*
+        objetos primitivos
+        */
+
+        var cadena = 'cadena';
+        var obj_cadena = new String('cadena');
+        console.log(cadena);
+        console.log(obj_cadena);
+
+        var numero = 7;
+        var obj_numero = new Number(10);
+        console.log(numero);
+        console.log(obj_numero);
+
+        var booleano = true;
+        var obj_booleano = new Boolean(false);
+        console.log(booleano);
+        console.log(obj_booleano);
+
+        /*
+        objetos compuestos
+        */
+
+        var arreglo = [0,1,2,3];
+        var obj_arreglo = new Array(0,1,2,3);
+        console.log(arreglo);
+        console.log(obj_arreglo);
+
+        var obj_literal = { nombre : 'Ruben', edad : 29};
+        var obj_constructor = new Object();
+        obj_constructor.nombre = "Dario";
+        obj_constructor.edad = 29;
+        console.log(obj_literal);
+        console.log(obj_constructor);
+
+         /*
+        objetos predefinidos
+        */
+
+        var fecha = new Date();
+        console.log(String);
+        console.log(Math);
+        console.log(fecha);
+        console.log(Number);
+        console.log(history);
+        console.log(location);
+        console.log(document);
+
+        /*
+        objetos definidos por el usuario
+        */
+
+        function Persona () {
+
+            //propiedades o caracteristicas
+            this.colorPelo = "negro";
+            this.edad = 29;
+
+            // metodos o capacidades (cosas que puede hacer)
+            this.decirNombre = function (){
+                return "Mi nombre es Ruben";
+            }
+            this.caminar = function () {
+                return "Estoy caminando";
+            }
+        }
+
+        var Ruben = new Persona();
+
+        console.log(Ruben.colorPelo);
+        console.log(Ruben.edad);
+        console.log(Ruben.decirNombre());
+        console.log(Ruben.caminar());
+
+
+
+
+
+
+
+
+
+
+
+
+
+    </script>
+</body>
+</html>

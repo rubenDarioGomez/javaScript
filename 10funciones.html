@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 
 <head>
     <meta charset="UTF-8">
@@ -34,23 +34,26 @@
             nombreFuncion(); // se llama la funcion para que se ejecute
 
 
-            // funciones con parametros
+            /*
+             funciones con parametros
+             */
+
             function funcionParametros(n1, n2) {
                 document.write(n1 + n2 + '<br>');
             }
 
-            funcionParametros(5, 10)
+            funcionParametros(50, 10)
 
             function parametrosInfinitos() {
                 let suma = 0
-
-                for (i = 0; i < arguments.length; i++) {
-                    suma += parseInt(arguments[i])
+                let arg = arguments;
+                for (i = 0; i < arg.length; i++) {
+                    suma += parseInt(arg[i])
                 }
                 document.write(suma + '<br>');
 
             }
-            parametrosInfinitos(1, 2, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1)
+            parametrosInfinitos(0, 2, 1, 1, 15, 11, 10, 1, 1, 1, 1, 1, 1, 1)
 
             function calculoIva(valor) {
                 let total = valor * .19;
@@ -59,13 +62,14 @@
 
             document.write(calculoIva(100));
 
-            // funciones anomimas autoejecutables
+            /* 
+            funciones anomimas autoejecutables
+            */ 
+            
             (function () { // se declara la funcion sin nnombre
                 alert('fuciones anonimas autoejecutables en javaScript'); // codigo a ejecutar en la funcion
 
             })(); // se colocan parentesis mas punto y coma para que se auto ejecute la funcion anomima
-
-            // funciones anomimas autoejecutables
 
             (function (n1, n2) { // se declara la funcion sin nnombre
                 let total = n1 + n2;
@@ -73,7 +77,16 @@
 
             })(5, 3); // se colocan parentesis mas punto y coma para que se auto ejecute la funcion anomima
 
-            // clousures (funcion dentro de otra funcion)
+            var mensaje ="mensaje autoejecutable";
+            (function(m){
+                function ver(s){
+                    document.write(s +'<br>');
+                }
+                ver(mensaje);
+            })(mensaje);
+            /*
+             clousures (funcion dentro de otra funcion)
+             */ 
 
             function padre() {
                 var nombre = "Ruben";
@@ -96,9 +109,9 @@
             console.log(ejecutar());
             console.log(ejecutar());
 
-            function crearSumador (n){
-                return function(m){
-                    return n+m;
+            function crearSumador(n) {
+                return function (m) {
+                    return n + m;
                 }
             }
 
@@ -109,7 +122,6 @@
             console.log(suma10(15));
             console.log(suma20(5));
             console.log(suma35(5));
-
 
         </script>
     </section>
